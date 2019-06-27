@@ -1,0 +1,88 @@
+<div class="row">
+  <div class="col-md-4 settop">
+      <div class="setnumber">
+          04
+      </div>
+      <div class="leftheading">
+              Robot Task
+      </div>           
+  </div>   
+</div>
+<div class="link" style="width :6%;"></div>
+<!-- <agm-map [latitude]='latitude' [longitude]='longitude' 
+      [mapTypeId]='mapType'>
+    </agm-map> -->
+
+  <!-- <p *ngIf="selectedMarker">
+    Lat: {{ selectedMarker.lat }} Lng: {{ selectedMarker.lng }} 
+    data id  {{ selectedMarker.value.id}}
+    name {{ selectedMarker.value.name}}
+     ip  {{ selectedMarker.value.ip}}
+   </p> -->
+
+<!-- <div class='sidebar pad2'>Listing</div>
+<div id='map' class='map pad2 match-parent'>Map</div> -->
+<!-- <div class="map" id="map" class=""></div> -->
+<div class="container">
+    <div class="row">
+      
+    <div class="col-md-8">
+
+            <agm-map
+            [latitude]="latitude"
+            [longitude]="longitude"
+            [zoom]="8"
+            (mapClick)="addMarker($event.coords.lat, $event.coords.lng)"
+          >
+            <agm-marker
+              *ngFor="let marker of markers"
+              [latitude]="marker.lat"
+              [longitude]="marker.lng"
+              [opacity]="marker.alpha"
+              [markerDraggable]="true"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="lat : {{marker.lat}} , lag : {{marker.lat}} , Robot ID  : {{marker.data.id}} ,
+              Robot Name : {{marker.data.name}} , Robot IP : {{marker.data.ip}}"
+                    (markerClick)="selectMarker($event, marker)"
+            >
+            </agm-marker>
+          
+          </agm-map>
+    </div>
+    <div class="col-md-4"  *ngIf="selectedMarker">
+      <div class="row">
+                <div class="col-md-6  " >
+            <img class="img-fluid icon " src="assets/roboticon.jpg">
+          </div>
+            <span class="col-md-6 name">
+               <h3> Hi.. I am <span class="namerobo">{{ selectedMarker.value.name}} </span>.</h3>
+            </span>
+        
+      </div>
+      
+      <div class="row setdetails">
+        <div class="col-md-12" >
+          
+              <!-- <p >
+                  Lat: {{ selectedMarker.lat }} Lng: {{ selectedMarker.lng }} 
+                  data id  {{ selectedMarker.value.id}}
+                  name {{ selectedMarker.value.name}}
+                   ip  {{ selectedMarker.value.ip}}
+                 </p> -->
+            
+            <h6>My Robot id is  {{ selectedMarker.value.id}} 
+            </h6>
+            <h6>My IP is  {{ selectedMarker.value.ip}} </h6>
+            <h6>
+               I am at Lat: {{ selectedMarker.lat }} ,  Lng: {{ selectedMarker.lng }} 
+            </h6>
+              <h5 >
+                Thanks, Nice to meet You.
+            </h5>
+          
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

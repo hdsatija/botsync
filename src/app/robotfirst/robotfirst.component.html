@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-4 settop">
+        <div class="setnumber">
+            02
+        </div>
+        <div class="leftheading">
+                Robot Task
+        </div>           
+    </div>   
+</div>
+<div class="link" style="width :6%;"></div>
+
+<div class="row">
+  <div class="col-md-4 ">
+      <form (ngSubmit)="openrobot(f)" #f="ngForm">
+      <div class="form-group">
+          <label for="numberofrobot">Enter Number of Robot</label>
+          <input type="number" [(ngModel)]="number"
+          name="numberofrobot"
+          [ngClass]="{'setborder': !validrobot}"
+            class="form-control numberrobot"
+            id="numberofrobot"
+            min="1"
+            max="5"
+             placeholder="Enter Number of robot"
+             ngModel
+             required
+             #numrobot="ngModel"
+             >
+            <span class="help-block" *ngIf="!numrobot.valid && numrobot.touched" >Enter a number </span>
+          <span *ngIf="!validrobot" class="help-block1">Number of Robot must be between 1 and 5.</span>
+        </div>
+        <button type="submit"
+         class="btn btn-dark btn-lg"
+         [disabled]="!f.valid">Submit</button>    
+    </form>
+  </div>
+  <div class="col-md-7 mx-auto iconn" >
+      <img class="img-fluid " src="assets/bot2.jpeg">
+    </div>
+</div>
+  

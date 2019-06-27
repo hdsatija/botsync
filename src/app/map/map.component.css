@@ -1,0 +1,74 @@
+.setnumber {
+    position: absolute;
+    font-size: 100px;
+    z-index: 0;
+    color: #e4dfdf;
+    font-weight: 900;
+    line-height: 20px;
+}
+.namerobo{
+  letter-spacing: 2px;
+
+  color:#ed7d31;
+}
+.setdetails{
+  letter-spacing: 2px;
+    margin-top: 5%;
+}
+.setcontainer{
+    margin-bottom: 3%;
+}
+.match-parent {
+    width: 100%;
+    min-height: 800px;
+
+  }
+  .sidebar {
+    width: 33.3333%;
+  }
+  agm-map { height: 300px;}
+  .map {
+    border-left: 1px solid #fff;
+    position: absolute;
+    left: 33.3333%;
+    width: 66.6666%;
+    top: 0;
+    bottom: 0;
+  }
+  
+  .pad2 {
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+.settop{
+    margin-top: 4%;
+}
+.leftheading {
+    letter-spacing: 1px;
+    font-size: 32px;
+    font-weight: 900;
+    z-index: 1;
+    position: relative;
+}
+agm-map{
+  height: 400px;
+}
+.link{
+    margin-bottom: 2%;
+    padding-bottom: 1px;
+    font-size: 10px;
+    clear: left;
+    font-weight: bold !important;
+    border-bottom:2px solid #0083ff;
+    letter-spacing: 4px;
+    color: #3f3f3f;
+    text-decoration: none;
+}
+.robotbtn{
+  max-width: 40%;
+}
+.name{
+  padding-top: 5%;
+}

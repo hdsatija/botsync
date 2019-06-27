@@ -1,0 +1,26 @@
+.heading{
+    margin-top: 2%;
+
+}
+.heading1{
+    margin-top: 2%;
+    color: #ed7d31;
+    font-weight: 700;
+}
+.head{
+    cursor: pointer;
+    padding-left: 0px;
+}
+.icon{
+    cursor: pointer;
+}
+.logo{
+    
+}
+.border{
+    width: 117%;
+    margin-left: -9%;
+}
+.numberrobot{
+    width: 50%;
+}

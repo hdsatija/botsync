@@ -1,0 +1,64 @@
+<div class="row">
+        <div class="col-md-4 settop">
+            <div class="setnumber">
+                03
+            </div>
+            <div class="leftheading">
+                    Robot Task
+            </div>           
+        </div>   
+    </div>
+    <div class="link" style="width :6%;"></div>
+<div class="container setcontainer">
+    <form (ngSubmit)="submitall(z)" #z="ngForm">
+<div class="row" >
+		<div class="col-md-10 mx-auto">
+				<div class="from-group">
+					<div class="row" *ngFor="let num of arr ;let i = index" [attr.data-index]="i">
+              <div class="form-group col-md-4">
+                  <label for="robotid">Enter ROBOT ID *</label>
+                  <input name="robotid{{[i]}}" type="number" [(ngModel)]="robotid[i]"
+                   class="form-control numberrobot" 
+                   placeholder="Enter robot id "
+                   ngModel
+                    required
+                   #idrobot="ngModel" >
+                    <span class="help-block" *ngIf="!idrobot.valid && idrobot.touched" >Enter a number </span>
+              </div>
+              <div class="form-group col-md-4">
+                  <label for="robotname">Enter ROBOT Nickname*  </label>
+                  <input name="robotname{{[i]}}" type="text" [(ngModel)]="robotname[i]"
+                   class="form-control numberrobot" 
+                   placeholder="Enter ROBOT Nickname "
+                   ngModel
+                    required
+                    #namerobot="ngModel"
+                    >
+                    <span class="help-block" *ngIf="!namerobot.valid && namerobot.touched" >Enter a Name of Robot </span>
+              </div>
+              <div class="form-group col-md-4">
+                  <label for="robotip">Enter IP * </label>
+                  <input name="robotip{{[i]}}" type="text" [(ngModel)]="robotip[i]"
+                   class="form-control numberrobot" 
+                   placeholder="Enter robot IP"
+                   ngModel
+                  required
+                  #iprobot="ngModel"
+                   >
+                   <span class="help-block" *ngIf="!iprobot.valid && iprobot.touched" >Enter a IP </span>
+              </div>
+					</div>
+
+				</div>
+		
+        </div>
+</div>
+ <div class="row">
+        <div class="col-md-10 mx-auto">
+        <button type="submit" 
+        class="btn btn-dark btn-lg"
+        [disabled]="!z.valid" >Submit</button>
+        </div>
+</div>
+</form>
+</div>
