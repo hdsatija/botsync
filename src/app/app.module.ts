@@ -27,7 +27,7 @@ import { GetdataService } from './getdata.service';
     FormsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey : 'AIzaSyCgmn4_MaPPp5rf4ggTQig0QfVoakI_ud8'
+      apiKey : ''
     }),
   ],
   providers: [GetdataService],
